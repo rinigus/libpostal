@@ -102,7 +102,8 @@ static greatest_test_res test_expansion_contains_with_languages(char *input, cha
         CHECK_CALL(test_expansion_contains_phrase_option_with_languages(input, output, options, root, num_languages, args));
         va_end(args);
     } else {
-        CHECK_CALL(test_expansion_contains_phrase_option_with_languages(input, output, options, root, num_languages, NULL));
+        va_list args;
+        CHECK_CALL(test_expansion_contains_phrase_option_with_languages(input, output, options, root, num_languages, args));
     }
     PASS();
 }
@@ -116,7 +117,8 @@ static greatest_test_res test_root_expansion_contains_with_languages(char *input
         CHECK_CALL(test_expansion_contains_phrase_option_with_languages(input, output, options, root, num_languages, args));
         va_end(args);
     } else {
-        CHECK_CALL(test_expansion_contains_phrase_option_with_languages(input, output, options, root, num_languages, NULL));
+        va_list args;
+        CHECK_CALL(test_expansion_contains_phrase_option_with_languages(input, output, options, root, num_languages, args));
     }
     PASS();
 }
